@@ -1,0 +1,5 @@
+# Exclude node_modules folder from git tracking
+node_modules
+
+# Exclude package-lock.json from git tracking
+package-lock.json
