@@ -4,6 +4,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
+const routes = require('./routes/index')
 const app = express()
 
 //app.all('*', ensureSecure)
@@ -11,6 +12,8 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
+
+app.use(routes)
 
 const port = process.env.PORT || '3030'
 app.set('port', port)
